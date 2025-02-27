@@ -440,6 +440,10 @@
         <div class="stat-label">Total Reviews</div>
         <div id="reviewCount" class="stat-value text-4xl"></div>
       </div>
+      <div class="stat-card">
+        <h3>Recommendations</h3>
+        <div id="recommendations"></div>
+      </div>
       
       <div id="sentimentDistribution"></div>
       
@@ -449,18 +453,12 @@
           <div id="loadingSpinner" class="loading-spinner hidden"></div>
           <img id="sentimentPlot" class="hidden" alt="Sentiment Distribution">
       </div>
-      
-     
       </div>
       
-     
-      
-      <div class="stat-card">
-        <h3>Recommendations</h3>
-        <div id="recommendations"></div>
-      </div>
     </div>
     
+   
+
     <button id="analyzeBtn" class="button mt-6 transform hover:scale-105 transition-all">
       Analyze Reviews
     </button>
@@ -471,10 +469,6 @@
     </a>
     
   </div>
-
- 
-    
-   
   </div>
   
   <script src="scripts/popup.js"></script>
