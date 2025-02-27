@@ -1,5 +1,8 @@
 const API_URL = 'https://api-for-minor-project.onrender.com';
 
+// for local testing
+// const API_URL = 'http://127.0.0.1:8000';
+
 // Enhanced scraping with language support
 async function scrapeReviews() {
   return new Promise((resolve, reject) => {
@@ -80,6 +83,9 @@ async function runAnalysis(elements) {
     // Prevent caching and use full URL for the sentiment image
     const timestamp = new Date().getTime();
     const sentimentPlotUrl = `https://api-for-minor-project.onrender.com/static/sentiment.png`;
+    // for local testing
+    // const sentimentPlotUrl = 'http://localhost:8000/${results.sentiment_plot}?t=${timestamp}';
+
     document.getElementById('sentimentPlot').src = sentimentPlotUrl;
     document.getElementById('sentimentPlot').classList.remove("hidden");
     document.getElementById('loadingSpinner').classList.add("hidden");
@@ -362,6 +368,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
         try {
             const response = await fetch('https://api-for-minor-project.onrender.com', {
+            // for local testing
+            // const response = await fetch('http://127.0.0.1:8000', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
